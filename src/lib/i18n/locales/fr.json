@@ -1,0 +1,43 @@
+{
+  "hero": {
+    "title": "Identifiez N'importe Quelle Plante en Quelques Secondes",
+    "subtitle": "Grâce à la Technologie IA",
+    "description": "Téléchargez simplement une photo de n'importe quelle plante et obtenez une identification instantanée, des instructions d'entretien détaillées et des conseils de culture.",
+    "browseGallery": "Parcourir la Galerie",
+    "learnMore": "En Savoir Plus"
+  },
+  "gallery": {
+    "title": "Galerie d'Exemples de Plantes",
+    "close": "Fermer"
+  },
+  "upload": {
+    "dropzone": {
+      "title": "Déposez votre image ici, ou parcourez",
+      "subtitle": "Supporte JPG, PNG et WebP"
+    },
+    "identifying": "Identification de la plante...",
+    "error": "Échec de l'identification de la plante. Veuillez réessayer.",
+    "takePhoto": "Prendre une Photo"
+  },
+  "camera": {
+    "cancel": "Annuler",
+    "error": "Impossible d'accéder à la caméra. Veuillez vérifier les permissions et réessayer."
+  },
+  "plantInfo": {
+    "about": "À propos",
+    "watering": "Arrosage",
+    "sunlight": "Lumière",
+    "soil": "Sol",
+    "noInfo": {
+      "watering": "Aucune information d'arrosage disponible",
+      "sunlight": "Aucune information de lumière disponible",
+      "soil": "Aucune information de sol disponible"
+    }
+  },
+  "language": {
+    "select": "Sélectionner la langue",
+    "en": "English",
+    "fr": "Français",
+    "ar": "العربية"
+  }
+}

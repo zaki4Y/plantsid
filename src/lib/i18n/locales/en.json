@@ -1,0 +1,43 @@
+{
+  "hero": {
+    "title": "Identify Any Plant in Seconds",
+    "subtitle": "Using AI Technology",
+    "description": "Simply upload a photo of any plant and get instant identification, detailed care instructions, and growing tips.",
+    "browseGallery": "Browse Gallery",
+    "learnMore": "Learn More"
+  },
+  "gallery": {
+    "title": "Sample Plant Gallery",
+    "close": "Close"
+  },
+  "upload": {
+    "dropzone": {
+      "title": "Drop your image here, or browse",
+      "subtitle": "Supports JPG, PNG and WebP"
+    },
+    "identifying": "Identifying plant...",
+    "error": "Failed to identify plant. Please try again.",
+    "takePhoto": "Take a Photo"
+  },
+  "camera": {
+    "cancel": "Cancel",
+    "error": "Unable to access camera. Please check permissions and try again."
+  },
+  "plantInfo": {
+    "about": "About",
+    "watering": "Watering",
+    "sunlight": "Sunlight",
+    "soil": "Soil",
+    "noInfo": {
+      "watering": "No watering information available",
+      "sunlight": "No sunlight information available",
+      "soil": "No soil information available"
+    }
+  },
+  "language": {
+    "select": "Select Language",
+    "en": "English",
+    "fr": "Français",
+    "ar": "العربية"
+  }
+}
