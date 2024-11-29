@@ -42,19 +42,29 @@ export async function identifyPlant(base64Image: string): Promise<PlantIdentific
       }
     );
 
+    if (!response.data.suggestions || response.data.suggestions.length === 0) {
+      throw new Error('No plant detected in this image. Please upload a clear photo of a plant for identification.');
+    }
+
     const result = response.data.suggestions[0];
+    const probability = result.probability || 0;
+
+    if (probability < 0.3) { // 30% confidence threshold
+      throw new Error('No plant detected in this image. Please upload a clear photo of a plant for identification.');
+    }
     
     // Extract the text value from complex objects
     const getTextValue = (obj: any) => {
       if (!obj) return '';
-      return typeof obj === 'object' && obj.value ? obj.value : obj;
+      if (typeof obj === 'string') return obj;
+      return obj.value || '';
     };
 
     return {
       id: result.id,
       name: result.plant_name,
       commonNames: result.plant_details.common_names || [],
-      confidence: result.probability,
+      confidence: probability,
       description: getTextValue(result.plant_details.description),
       taxonomy: {
         family: getTextValue(result.plant_details.taxonomy.family),
@@ -68,6 +78,9 @@ export async function identifyPlant(base64Image: string): Promise<PlantIdentific
       },
     };
   } catch (error) {
+    if (error instanceof Error) {
+      throw new Error(error.message);
+    }
     throw new Error('Failed to identify plant');
   }
 }

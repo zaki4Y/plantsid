@@ -38,9 +38,10 @@ export function UploadZone({ onImageSelect }: UploadZoneProps) {
       setProgress(100);
       setResult(identification);
     } catch (error) {
+      clearPreview();
       toast({
         title: t('upload.error'),
-        description: t('upload.error'),
+        description: error instanceof Error ? error.message : t('upload.error'),
         variant: 'destructive',
       });
     } finally {
